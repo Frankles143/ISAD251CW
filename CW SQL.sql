@@ -1,4 +1,4 @@
-create table dbo.[User]
+create table User
 (
 	user_id int identity
 		constraint User_pk
@@ -11,14 +11,14 @@ create table dbo.[User]
 )
 go
 
-create table [Order]
+create table Order
 (
 	order_Id int identity
 		constraint Order_pk
 			primary key nonclustered,
 	user_id int not null
 		constraint Order_User_user_id_fk
-			references [User],
+			references User,
 	table_number int not null,
 	time_ordered datetime,
 	completed tinyint default 0 not null,
@@ -43,7 +43,7 @@ create table Order_Details
 (
 	order_id int 
 		constraint Order_Details_Order_order_Id_fk
-			references [Order],
+			references Order,
 	product_id int
 		constraint Order_Details_Product_product_id_fk
 			references Product,
