@@ -35,7 +35,8 @@ create table Product
 	prod_desc nvarchar(max),
 	prod_category nvarchar(max) not null,
 	prod_price decimal(13,2) not null,
-	in_use tinyint default 0 not null
+	in_use tinyint default 0 not null,
+	stock int default 0
 )
 go
 
@@ -52,5 +53,7 @@ create table Order_Details
 		primary key nonclustered (order_id, product_id)
 )
 go
+
+
 
 
