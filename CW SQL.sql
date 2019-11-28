@@ -53,4 +53,16 @@ create table Order_Details
 )
 go
 
+--Views, Triggers and Procedures
+
+--Creates a sales view
+CREATE VIEW Sales AS
+SELECT sum(Order_Details.quantity * Product.prod_price) as TotalCost,
+ [Order].order_id as OrderID, dbo.[User].user_id as UserId
+ FROM Order_Details, Product, [Order], dbo.[User]
+ WHERE [Order].order_id = Order_Details.order_id
+ AND Order_Details.product_id = Product.product_id
+ AND [Order].user_id = dbo.[User].user_id
+ GROUP BY [Order].order_id, dbo.[User].user_id;
+
 
