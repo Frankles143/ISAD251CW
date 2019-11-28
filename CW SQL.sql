@@ -65,6 +65,59 @@ SELECT sum(Order_Details.quantity * Product.prod_price) as TotalCost,
  AND Order_Details.product_id = Product.product_id
  AND [Order].user_id = dbo.[User].user_id
  GROUP BY [Order].order_id, dbo.[User].user_id;
+ 
+ --Monthly sales view
+CREATE VIEW MonthlySales AS
+SELECT sum(Order_Details.quantity * Product.prod_price) as TotalCost,
+ [Order].order_id as OrderID, dbo.[User].user_id as UserId
+ FROM Order_Details, Product, [Order], dbo.[User]
+ WHERE [Order].time_ordered > DATEADD(month, -1, GETDATE())
+ AND [Order].order_id = Order_Details.order_id
+ AND Order_Details.product_id = Product.product_id
+ AND [Order].user_id = dbo.[User].user_id
+ GROUP BY [Order].order_id, dbo.[User].user_id;
+go
+
+ 
+--Change stock trigger
+CREATE TRIGGER ChangeStock ON Order_Details
+AFTER INSERT
+AS
+BEGIN
+    UPDATE Product
+    SET Product.stock = Product.stock - inserted.Quantity
+    FROM inserted
+    WHERE Product.product_id = inserted.product_id
+END
+go
+ 
+ -- Find details of a product
+CREATE PROCEDURE FindProduct(@ProductID as INT) AS
+BEGIN
+    SELECT prod_desc, prod_price, stock
+    FROM Product
+    WHERE product_id = @ProductID
+END;
+go 
+ 
+ --In Stock procedure returning boolean
+CREATE PROCEDURE InStock(@ProductID as INT, @StockWanted as INT) AS
+    BEGIN
+        DECLARE @currentStock INT;
+
+            SELECT @currentStock = Product.stock
+            FROM Product
+            WHERE Product.product_id = @ProductID
+
+        IF @currentStock < @StockWanted
+        BEGIN
+            RETURN 0;
+        END
+        ELSE IF @currentStock >= @StockWanted
+        BEGIN
+            RETURN 1;
+        END
+    END
 
 
 
