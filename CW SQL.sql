@@ -90,6 +90,21 @@ BEGIN
     WHERE Product.product_id = inserted.product_id
 END
 go
+
+--A trigger to turn items off or on sale
+CREATE TRIGGER OnSale ON Product
+    AFTER UPDATE, INSERT
+    AS
+    BEGIN
+        UPDATE Product
+        SET Product.in_use = 1
+        WHERE Product.stock >= 1;
+
+        UPDATE Product
+        SET Product.in_use = 0
+        WHERE Product.stock = 0;
+    END
+GO
  
  -- Find details of a product
 CREATE PROCEDURE FindProduct(@ProductID as INT) AS
@@ -118,6 +133,8 @@ CREATE PROCEDURE InStock(@ProductID as INT, @StockWanted as INT) AS
             RETURN 1;
         END
     END
+
+
 
 
 
