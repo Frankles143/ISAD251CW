@@ -35,7 +35,8 @@ create table Product
 	prod_desc nvarchar(max),
 	prod_category nvarchar(max) not null,
 	prod_price decimal(13,2) not null,
-	in_use tinyint default 0 not null
+	in_use tinyint default 0 not null,
+	stock int default 0
 )
 go
 
@@ -64,5 +65,7 @@ SELECT sum(Order_Details.quantity * Product.prod_price) as TotalCost,
  AND Order_Details.product_id = Product.product_id
  AND [Order].user_id = dbo.[User].user_id
  GROUP BY [Order].order_id, dbo.[User].user_id;
+
+
 
 
