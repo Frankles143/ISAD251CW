@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj": {}
+    "C:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj": {}
   },
   "projects": {
-    "D:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj": {
+    "C:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj",
+        "projectUniqueName": "C:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj",
         "projectName": "The Winchester",
-        "projectPath": "D:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj",
-        "packagesPath": "C:\\Users\\JoshPC\\.nuget\\packages\\",
-        "outputPath": "D:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\obj\\",
+        "projectPath": "C:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj",
+        "packagesPath": "C:\\Users\\josh-\\.nuget\\packages\\",
+        "outputPath": "C:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\JoshPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\josh-\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

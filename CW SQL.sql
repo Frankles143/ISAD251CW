@@ -21,6 +21,7 @@ create table Order
 			references User,
 	table_number int not null,
 	time_ordered datetime,
+	preparing tinyint default 0 not null,
 	completed tinyint default 0 not null,
 	time_completed datetime
 )
@@ -105,6 +106,19 @@ CREATE TRIGGER OnSale ON Product
         WHERE Product.stock = 0;
     END
 GO
+
+--Set datetime after completed
+CREATE TRIGGER CompletedTime ON [Order]
+    AFTER UPDATE
+    AS
+    BEGIN
+        UPDATE [Order]
+        SET Order.time_completed = GETDATE()
+        FROM inserted
+        WHERE Order.completed = 1
+        AND [Order].order_id = inserted.order_id
+    END
+GO
  
  -- Find details of a product
 CREATE PROCEDURE FindProduct(@ProductID as INT) AS
@@ -113,7 +127,7 @@ BEGIN
     FROM Product
     WHERE product_id = @ProductID
 END;
-go 
+GO 
  
  --In Stock procedure returning boolean
 CREATE PROCEDURE InStock(@ProductID as INT, @StockWanted as INT) AS
