@@ -19,9 +19,8 @@
             <div
                 class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav ml-auto">
-                    <li class="nav-item" role="presentation"></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="#">Food and drink</a></li>
-                    <li class="nav-item" role="presentation"><a class="nav-link" href="product-page.html">Product</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="food-and-drink.html">Food and drink</a></li>
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="your-order.html">Your order</a></li>
                     <li class="nav-item" role="presentation"><a class="nav-link" href="about-us.html">About Us</a></li>
                     <li class="nav-item" role="presentation"></li>
                 </ul>
@@ -32,69 +31,48 @@
             <div class="container">
                 <div class="block-heading">
                     <h2 class="text-info">Shopping Cart</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc quam urna, dignissim nec auctor in, mattis vitae leo.</p>
+                    <p>Make sure you have everything you need, and you've chosen a table number, before hitting checkout!</p>
                 </div>
                 <div class="content">
                     <div class="row no-gutters">
-                        <div class="col-md-12 col-lg-8">
+                        <div class="col-md-12 col-lg-8 offset-lg-0">
                             <div class="items">
                                 <div class="product">
                                     <div class="row justify-content-center align-items-center">
-                                        <div class="col-md-3">
-                                            <div class="product-image"><img class="img-fluid d-block mx-auto image" src="assets/img/tech/image2.jpg"></div>
-                                        </div>
-                                        <div class="col-md-5 product-info"><a class="product-name" href="#">Lorem Ipsum dolor</a>
+                                        <div class="col-md-5 product-info">
+                                            <!-- Start: lblItemLink --><a class="product-name" href="#">Lorem Ipsum dolor</a>
+                                            <!-- End: lblItemLink -->
                                             <div class="product-specs">
-                                                <div><span>Display:&nbsp;</span><span class="value">5 inch</span></div>
-                                                <div><span>RAM:&nbsp;</span><span class="value">4GB</span></div>
-                                                <div><span>Memory:&nbsp;</span><span class="value">32GB</span></div>
+                                                <div></div>
+                                                <div></div>
+                                                <div></div>
                                             </div>
                                         </div>
-                                        <div class="col-6 col-md-2 quantity"><label class="d-none d-md-block" for="quantity">Quantity</label><input type="number" id="number" class="form-control quantity-input" value="1"></div>
-                                        <div class="col-6 col-md-2 price"><span>$120</span></div>
+                                        <div class="col-6 col-md-2 quantity"><label class="d-none d-md-block" for="quantity">Quantity</label>
+                                            <!-- Start: numItemQuantity --><input type="number" id="number" class="form-control quantity-input" value="1">
+                                            <!-- End: numItemQuantity -->
+                                        </div>
+                                        <div class="col-6 col-md-2 price">
+                                            <!-- Start: lblItemPrice --><span>$120</span>
+                                            <!-- End: lblItemPrice -->
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="product">
-                                    <div class="row justify-content-center align-items-center">
-                                        <div class="col-md-3">
-                                            <div class="product-image"><img class="img-fluid d-block mx-auto image" src="assets/img/tech/image2.jpg"></div>
-                                        </div>
-                                        <div class="col-md-5 product-info"><a class="product-name" href="#">Lorem Ipsum dolor</a>
-                                            <div class="product-specs">
-                                                <div><span>Display:&nbsp;</span><span class="value">5 inch</span></div>
-                                                <div><span>RAM:&nbsp;</span><span class="value">4GB</span></div>
-                                                <div><span>Memory:&nbsp;</span><span class="value">32GB</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-md-2 quantity"><label class="d-none d-md-block" for="quantity">Quantity</label><input type="number" id="number" class="form-control quantity-input" value="1"></div>
-                                        <div class="col-6 col-md-2 price"><span>$120</span></div>
-                                    </div>
+                                <div class="product"></div><span>Table Number (required)</span>
+                                <!-- Start: cmbTableNumber -->
+                                <div class="dropdown"><button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Table Number</button>
+                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">1</a><a class="dropdown-item" role="presentation" href="#">2</a><a class="dropdown-item" role="presentation" href="#">3</a></div>
                                 </div>
-                                <div class="product">
-                                    <div class="row justify-content-center align-items-center">
-                                        <div class="col-md-3">
-                                            <div class="product-image"><img class="img-fluid d-block mx-auto image" src="assets/img/tech/image2.jpg"></div>
-                                        </div>
-                                        <div class="col-md-5 product-info"><a class="product-name" href="#">Lorem Ipsum dolor</a>
-                                            <div class="product-specs">
-                                                <div><span>Display:&nbsp;</span><span class="value">5 inch</span></div>
-                                                <div><span>RAM:&nbsp;</span><span class="value">4GB</span></div>
-                                                <div><span>Memory:&nbsp;</span><span class="value">32GB</span></div>
-                                            </div>
-                                        </div>
-                                        <div class="col-6 col-md-2 quantity"><label class="d-none d-md-block" for="quantity">Quantity</label><input type="number" id="number" class="form-control quantity-input" value="1"></div>
-                                        <div class="col-6 col-md-2 price"><span>$120</span></div>
-                                    </div>
-                                </div>
+                                <!-- End: cmbTableNumber -->
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-4">
                             <div class="summary">
                                 <h3>Summary</h3>
-                                <h4><span class="text">Subtotal</span><span class="price">$360</span></h4>
-                                <h4><span class="text">Discount</span><span class="price">$0</span></h4>
-                                <h4><span class="text">Shipping</span><span class="price">$0</span></h4>
-                                <h4><span class="text">Total</span><span class="price">$360</span></h4><button class="btn btn-primary btn-block btn-lg" type="button">Checkout</button></div>
+                                <h4><span class="text">Total</span><span class="price">$360</span></h4>
+                                <!-- Start: btnCheckout --><button class="btn btn-primary btn-block btn-lg" type="button">Checkout</button>
+                                <!-- End: btnCheckout -->
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -107,8 +85,9 @@
                 <div class="col-sm-3">
                     <h5>Get started</h5>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Food and Drink</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="food-and-drink.html">Food and Drink</a></li>
+                        <li><a href="your-order.html">Your Order</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3">
@@ -129,13 +108,13 @@
                 <div class="col">
                     <h5>Admin</h5>
                     <ul>
-                        <li><a href="#">Admin</a></li>
+                        <li><a href="login.html">Admin</a></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="footer-copyright">
-            <p>© 2019 Copyright Text</p>
+            <p>© 2020 The Winchester</p>
         </div>
     </footer>
     <script src="assets/js/jquery.min.js"></script>
