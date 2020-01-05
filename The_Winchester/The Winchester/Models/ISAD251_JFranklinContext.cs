@@ -26,7 +26,6 @@ namespace The_Winchester
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
                 optionsBuilder.UseSqlServer("Server=socem1.uopnet.plymouth.ac.uk;Database=ISAD251_JFranklin;User Id=JFranklin; Password=ISAD251_22203114");
             }
         }
@@ -41,7 +40,7 @@ namespace The_Winchester
 
                 entity.Property(e => e.OrderId).HasColumnName("OrderID");
 
-                entity.Property(e => e.TotalCost).HasColumnType("decimal(38, 2)");
+                entity.Property(e => e.TotalCost).HasColumnType("decimal");
             });
 
             modelBuilder.Entity<Order>(entity =>
@@ -123,7 +122,7 @@ namespace The_Winchester
 
                 entity.Property(e => e.ProdPrice)
                     .HasColumnName("prod_price")
-                    .HasColumnType("decimal(13, 2)");
+                    .HasColumnType("decimal");
 
                 entity.Property(e => e.Stock).HasColumnName("stock");
             });
@@ -136,7 +135,7 @@ namespace The_Winchester
 
                 entity.Property(e => e.OrderId).HasColumnName("OrderID");
 
-                entity.Property(e => e.TotalCost).HasColumnType("decimal(38, 2)");
+                entity.Property(e => e.TotalCost).HasColumnType("decimal");
             });
 
             modelBuilder.Entity<User>(entity =>
