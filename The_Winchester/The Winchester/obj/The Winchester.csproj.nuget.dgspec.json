@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj": {}
+    "D:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj": {}
   },
   "projects": {
-    "C:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj": {
+    "D:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj",
+        "projectUniqueName": "D:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj",
         "projectName": "The Winchester",
-        "projectPath": "C:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj",
-        "packagesPath": "C:\\Users\\josh-\\.nuget\\packages\\",
-        "outputPath": "C:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\obj\\",
+        "projectPath": "D:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\The Winchester.csproj",
+        "packagesPath": "C:\\Users\\JoshPC\\.nuget\\packages\\",
+        "outputPath": "D:\\git\\ISAD251CW\\The_Winchester\\The Winchester\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\josh-\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\JoshPC\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -44,6 +44,24 @@
             "EntityFramework": {
               "target": "Package",
               "version": "[6.3.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.Extensions.Logging.Debug": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[3.0.0, )"
             }
           },
           "imports": [

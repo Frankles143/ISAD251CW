@@ -28,6 +28,35 @@ namespace The_Winchester.Controllers
             return View();
         }
 
+        public IActionResult FoodDrink()
+        {
+            return View();
+        }
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+        public IActionResult AdminHome()
+        {
+            return View();
+        }
+        public IActionResult AdminLogin()
+        {
+            return View();
+        }
+        public IActionResult PictureCredits()
+        {
+            return View();
+        }
+        public IActionResult ShoppingCart()
+        {
+            return View();
+        }
+        public IActionResult UserOrder()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

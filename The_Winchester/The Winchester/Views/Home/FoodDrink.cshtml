@@ -3,4 +3,70 @@
 @{
 }
 
-
+    <body>
+        
+        <main class="page catalog-page">
+            <section class="clean-block clean-catalog dark">
+                <div class="container">
+                    <div class="block-heading">
+                        <h2 class="text-info">Food and Drink</h2>
+                        <p>Choose from a range of wonderful products and have them delivered to your table!</p>
+                    </div>
+                    <div class="content">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="d-none d-md-block">
+                                    <div class="filters">
+                                        <div class="filter-item"></div>
+                                    </div>
+                                </div>
+                                <div class="dropdown">
+                                    <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button" style="margin-left: 32px;">Filter</button>
+                                    <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">First Item</a><a class="dropdown-item" role="presentation" href="#">Second Item</a><a class="dropdown-item" role="presentation" href="#">Third Item</a></div>
+                                </div>
+                                <div class="d-md-none">
+                                    <a class="btn btn-link d-md-none filter-collapse" data-toggle="collapse" aria-expanded="false" aria-controls="filters" href="#filters" role="button">Filters<i class="icon-arrow-down filter-caret"></i></a>
+                                    <div class="collapse"
+                                         id="filters">
+                                        <div class="filters">
+                                            <div class="filter-item"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div class="products">
+                                    <div class="table-responsive">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Product</th>
+                                                    <th>Price</th>
+                                                    <th>Quantity</th>
+                                                    <th>Add to basket</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Burger</td>
+                                                    <td>£2.50</td>
+                                                    <td><input type="number"></td>
+                                                    <td><button class="btn btn-primary" type="button">Add</button><button class="btn btn-primary" type="button">Remove</button></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Pint</td>
+                                                    <td>£2.00</td>
+                                                    <td><input type="number"></td>
+                                                    <td><button class="btn btn-primary" type="button">Add</button><button class="btn btn-primary" type="button">Remove</button></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
