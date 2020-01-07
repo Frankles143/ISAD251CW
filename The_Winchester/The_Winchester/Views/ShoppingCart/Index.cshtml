@@ -1,9 +1,60 @@
-﻿
+﻿@using The_Winchester.Views.ViewModel
+@model ShoppingCartViewModel
 @{
     ViewData["Title"] = "Basket";
 }
 
-    <main class="page shopping-cart-page">
+@*<div class="row checkoutForm">
+    <h2>Your shopping cart</h2>
+    <h4>Here are the drinks in your shopping cart.</h4>
+    <table class="table table-bordered table-striped">
+        <thead>
+            <tr>
+                <th>Selected amount</th>
+                <th>Drink</th>
+                <th class="text-right">Price</th>
+                <th class="text-right">Subtotal</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var line in Model.ShoppingCart.ShoppingCartItems)
+            {
+                <tr>
+                    <td class="text-center">@line.Amount</td>
+                    <td class="text-left">@line.Drink.Name</td>
+                    <td class="text-right">@line.Drink.Price.ToString("c")</td>
+                    <td class="text-right">
+                        @((line.Amount * line.Drink.Price).ToString("c"))
+                    </td>
+                    <td class="text-center"><a class="glyphicon glyphicon-remove text-danger remove" asp-controller="ShoppingCart" asp-action="RemoveFromShoppingCart" asp-route-drinkId="@line.Drink.DrinkId"></a></td>
+                </tr>
+            }
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="3" class="text-right">Total:</td>
+                <td class="text-right">
+                    @Model.ShoppingCartTotal.ToString("c")
+                </td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <div class="text-right">
+        <div class="btn-group ">
+            <a class="btn btn-success" asp-controller="Order" asp-action="Checkout">Check out</a>
+            <a class="btn-group">
+                <a class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    Add more drinks<span class="caret"></span>
+                </a>
+            </a>
+        </div>
+    </div>
+</div>*@
+
+
+<main class="page shopping-cart-page">
         <section class="clean-block clean-cart dark">
             <div class="container">
                 <div class="block-heading">
@@ -17,8 +68,8 @@
                                 <div class="product">
                                     <div class="row justify-content-center align-items-center">
                                         <div class="col-md-5 product-info">
-                                            <!-- Start: lblItemLink --><a class="product-name" href="#">Lorem Ipsum dolor</a>
-                                            <!-- End: lblItemLink -->
+                                             Start: lblItemLink <a class="product-name" href="#">Lorem Ipsum dolor</a>
+                                             End: lblItemLink
                                             <div class="product-specs">
                                                 <div></div>
                                                 <div></div>
@@ -27,30 +78,30 @@
                                         </div>
                                         <div class="col-6 col-md-2 quantity">
                                             <label class="d-none d-md-block" for="quantity">Quantity</label>
-                                            <!-- Start: numItemQuantity --><input type="number" id="number" class="form-control quantity-input" value="1">
-                                            <!-- End: numItemQuantity -->
+                                             Start: numItemQuantity <input type="number" id="number" class="form-control quantity-input" value="1">
+                                             End: numItemQuantity
                                         </div>
                                         <div class="col-6 col-md-2 price">
-                                            <!-- Start: lblItemPrice --><span>$120</span>
-                                            <!-- End: lblItemPrice -->
+                                             Start: lblItemPrice <span>$120</span>
+                                             End: lblItemPrice
                                         </div>
                                     </div>
                                 </div>
                                 <div class="product"></div><span>Table Number (required)</span>
-                                <!-- Start: cmbTableNumber -->
+                                 Start: cmbTableNumber
                                 <div class="dropdown">
                                     <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-expanded="false" type="button">Table Number</button>
                                     <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">1</a><a class="dropdown-item" role="presentation" href="#">2</a><a class="dropdown-item" role="presentation" href="#">3</a></div>
                                 </div>
-                                <!-- End: cmbTableNumber -->
+                                 End: cmbTableNumber
                             </div>
                         </div>
                         <div class="col-md-12 col-lg-4">
                             <div class="summary">
                                 <h3>Summary</h3>
                                 <h4><span class="text">Total</span><span class="price">$360</span></h4>
-                                <!-- Start: btnCheckout --><button class="btn btn-primary btn-block btn-lg" type="button">Checkout</button>
-                                <!-- End: btnCheckout -->
+                                 Start: btnCheckout <button class="btn btn-primary btn-block btn-lg" type="button">Checkout</button>
+                                 End: btnCheckout
                             </div>
                         </div>
                     </div>

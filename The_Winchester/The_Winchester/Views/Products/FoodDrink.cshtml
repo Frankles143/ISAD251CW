@@ -49,10 +49,10 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @{
+                                            @*@{
                                                 foreach (var product in Model)
                                                 {
-                                                    if (product.InUse == 1)
+                                                    if (product.InUse == true)
                                                     {
                                                         <tr>
                                                             <td>@product.ProdName</td>
@@ -63,7 +63,7 @@
                                                         </tr>
                                                     }
                                                 }
-                                            }
+                                            }*@
                                         </tbody>
                                     </table>
                                 </div>
