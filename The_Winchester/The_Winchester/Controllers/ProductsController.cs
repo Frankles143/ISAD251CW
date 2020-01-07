@@ -24,6 +24,11 @@ namespace The_Winchester.Controllers
             return View(await _context.Product.ToListAsync());
         }
 
+        public async Task<IActionResult> FoodDrink()
+        {
+            return View(await _context.Product.ToListAsync());
+        }
+
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -147,11 +152,6 @@ namespace The_Winchester.Controllers
         private bool ProductExists(int id)
         {
             return _context.Product.Any(e => e.ProductId == id);
-        }
-
-        public IActionResult FoodDrink()
-        {
-            return View();
         }
     }
 }

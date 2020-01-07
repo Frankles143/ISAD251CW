@@ -1,4 +1,4 @@
-﻿@using The_Winchester.Models
+﻿
 @model IEnumerable<The_Winchester.Product>
 @{
     ViewData["Title"] = "FoodDrink";
@@ -43,54 +43,26 @@
                                             <tr>
                                                 <th>Product</th>
                                                 <th>Price</th>
+                                                <th>Description</th>
                                                 <th>Quantity</th>
                                                 <th>Add to basket</th>
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td>Burger</td>
-                                                <td>£2.50</td>
-                                                <td><input type="number"></td>
-                                                <td><button class="btn btn-primary" type="button">Add</button><button class="btn btn-primary" type="button">Remove</button></td>
-                                            </tr>
-                                            <tr>
-                                                <td>Pint</td>
-                                                <td>£2.00</td>
-                                                <td><input type="number"></td>
-                                                <td><button class="btn btn-primary" type="button">Add</button><button class="btn btn-primary" type="button">Remove</button></td>
-                                            </tr>
-                                            @*@{
-                                                    foreach (var product in Model)
+                                            @{
+                                                foreach (var product in Model)
+                                                {
+                                                    if (product.InUse == 1)
                                                     {
                                                         <tr>
                                                             <td>@product.ProdName</td>
                                                             <td>@product.ProdPrice.ToString("c")</td>
+                                                            <td>@product.ProdDesc</td>
+                                                            <td><input type="number"></td>
+                                                            <td><button class="btn btn-primary" type="button">Add</button> <button class="btn btn-primary" type="button">Remove</button></td>
                                                         </tr>
                                                     }
-                                                }*@
-                                            @foreach (var item in Model)
-                                            {
-                                                <tr>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.ProdName)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.ProdDesc)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.ProdCategory)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.ProdPrice)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.InUse)
-                                                    </td>
-                                                    <td>
-                                                        @Html.DisplayFor(modelItem => item.Stock)
-                                                    </td>
-                                                </tr>
+                                                }
                                             }
                                         </tbody>
                                     </table>
