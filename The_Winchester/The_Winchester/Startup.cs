@@ -10,6 +10,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using The_Winchester.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Http;
 
 namespace The_Winchester
 {
@@ -29,6 +30,13 @@ namespace The_Winchester
 
             services.AddDbContext<ISAD251_JFranklinContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("ISAD251_DB")));
+
+            //These allow instances of the shopping cart to be made, so if two people are requesting a cart, they both get an instance
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped(sp => ShoppingCart.GetCart(sp));
+
+            services.AddMemoryCache();
+            services.AddSession();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,7 +54,7 @@ namespace The_Winchester
             }
             app.UseHttpsRedirection();
             app.UseStaticFiles();
-
+            app.UseSession();
             app.UseRouting();
 
             app.UseAuthorization();

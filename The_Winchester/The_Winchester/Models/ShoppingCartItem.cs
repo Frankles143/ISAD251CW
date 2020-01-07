@@ -7,12 +7,12 @@ namespace The_Winchester.Models
 {
     public class ShoppingCartItem
     {
-        public int shoppingCartItemId { get; set; }
+        public int ShoppingCartItemId { get; set; }
 
-        public Product product { get; set; }
+        public Product Product { get; set; }
 
-        public int amount { get; set; }
+        public int Amount { get; set; }
 
-        public string shoppingCartId { get; set; }
+        public string ShoppingCartId { get; set; }
     }
 }
