@@ -148,5 +148,10 @@ namespace The_Winchester.Controllers
         {
             return _context.Product.Any(e => e.ProductId == id);
         }
+
+        public IActionResult FoodDrink()
+        {
+            return View();
+        }
     }
 }

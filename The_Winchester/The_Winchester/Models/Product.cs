@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 
 namespace The_Winchester
 {
     public partial class Product
     {
+        
         public Product()
         {
             OrderDetails = new HashSet<OrderDetails>();

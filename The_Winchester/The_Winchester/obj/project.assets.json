@@ -8553,11 +8553,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\git\\ISAD251\\The_Winchester\\The_Winchester\\The_Winchester.csproj",
+      "projectUniqueName": "D:\\git\\ISAD251CW\\The_Winchester\\The_Winchester\\The_Winchester.csproj",
       "projectName": "The_Winchester",
-      "projectPath": "D:\\git\\ISAD251\\The_Winchester\\The_Winchester\\The_Winchester.csproj",
+      "projectPath": "D:\\git\\ISAD251CW\\The_Winchester\\The_Winchester\\The_Winchester.csproj",
       "packagesPath": "C:\\Users\\JoshPC\\.nuget\\packages\\",
-      "outputPath": "D:\\git\\ISAD251\\The_Winchester\\The_Winchester\\obj\\",
+      "outputPath": "D:\\git\\ISAD251CW\\The_Winchester\\The_Winchester\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

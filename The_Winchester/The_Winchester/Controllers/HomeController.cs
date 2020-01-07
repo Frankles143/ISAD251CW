@@ -40,10 +40,6 @@ namespace The_Winchester.Controllers
         {
             return View();
         }
-        public IActionResult FoodDrink()
-        {
-            return View();
-        }
         public IActionResult PictureCredits()
         {
             return View();
