@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using The_Winchester.Models;
 
 namespace The_Winchester
 {
@@ -21,6 +22,7 @@ namespace The_Winchester
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Sales> Sales { get; set; }
         public virtual DbSet<User> User { get; set; }
+        public DbSet<ShoppingCartItem> ShoppingCartItems { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
