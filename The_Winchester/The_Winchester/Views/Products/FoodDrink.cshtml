@@ -5,7 +5,6 @@
 }
 
 <body>
-
     <main class="page catalog-page">
         <section class="clean-block clean-catalog dark">
             <div class="container">
@@ -49,21 +48,18 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            @*@{
+                                            @{
                                                 foreach (var product in Model)
                                                 {
-                                                    if (product.InUse == true)
-                                                    {
-                                                        <tr>
-                                                            <td>@product.ProdName</td>
-                                                            <td>@product.ProdPrice.ToString("c")</td>
-                                                            <td>@product.ProdDesc</td>
-                                                            <td><input type="number"></td>
-                                                            <td><button class="btn btn-primary" type="button">Add</button> <button class="btn btn-primary" type="button">Remove</button></td>
-                                                        </tr>
-                                                    }
+                                                    <tr>
+                                                        <td>@product.ProdName</td>
+                                                        <td>@product.ProdPrice.ToString("c")</td>
+                                                        <td>@product.ProdDesc</td>
+                                                        <td><input type="number"></td>
+                                                        <td><button class="btn btn-primary" type="button">Add</button> <button class="btn btn-primary" type="button">Remove</button></td>
+                                                    </tr>
                                                 }
-                                            }*@
+                                            }
                                         </tbody>
                                     </table>
                                 </div>

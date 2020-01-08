@@ -82,10 +82,12 @@ namespace The_Winchester.Models
         }
 
         //Returns our shopping list as a List, as long as it is not null
-        public List<ShoppingCartItem> GetShoppingCartItems()
-        {
-            return ShoppingCartItems ?? (ShoppingCartItems = _JFranklinContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId).Include(s => s.Product).ToList());
-        }
+        //public List<ShoppingCartItem> GetShoppingCartItems()
+        //{
+        //    ShoppingCartItems = _JFranklinContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId).Include(s => s.Product).ToList();
+
+        //    return ShoppingCartItems;
+        //}
 
         //Clears our entire cart
         public void ClearCart()
@@ -98,11 +100,11 @@ namespace The_Winchester.Models
         }
 
         //Returns the total cost of our cart
-        public decimal GetShoppingCartTotal()
-        {
-            var total = _JFranklinContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId).Select(c => c.Product.ProdPrice * c.Amount).Sum();
+        //public decimal GetShoppingCartTotal()
+        //{
+        //    var total = _JFranklinContext.ShoppingCartItems.Where(c => c.ShoppingCartId == ShoppingCartId).Select(c => c.Product.ProdPrice * c.Amount).Sum();
 
-            return total;
-        }
+        //    return total;
+        //}
     }
 }

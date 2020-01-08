@@ -19,7 +19,7 @@ namespace The_Winchester
         public decimal ProdPrice { get; set; }
         public byte InUse { get; set; }
         public int Stock { get; set; }
-        public IEnumerable<Product> Products { get; set; }
+        //public IEnumerable<Product> Products { get; set; }
 
         public virtual ICollection<OrderDetails> OrderDetails { get; set; }
     }
