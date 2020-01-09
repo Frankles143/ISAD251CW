@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "The_Winchester_API", "The_Winchester_API\The_Winchester_API.csproj", "{1C4B2FE7-124B-4FDF-B09B-907B66D3AA7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1C4B2FE7-124B-4FDF-B09B-907B66D3AA7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C4B2FE7-124B-4FDF-B09B-907B66D3AA7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C4B2FE7-124B-4FDF-B09B-907B66D3AA7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C4B2FE7-124B-4FDF-B09B-907B66D3AA7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57914FFA-8BBB-4EE2-AAE0-5012CE47791A}
+	EndGlobalSection
+EndGlobal
