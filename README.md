@@ -1,7 +1,7 @@
 # ISAD251CW
 Welcome to the GitHub page for The Winchester pub.
 
-![Home Screenshot](/Diagrams_and_Screenshots/Screenshots/firefox_home.png?raw=true "Firefox")   
+![Home Screenshot](/Diagrams_and_Screenshots/Screenshots/Firefox_home.png?raw=true "Firefox")   
 We start the website here, at the home screen. Here you can see we have a good contrast from the navigation bar, footer and the main content. In the main section we have a small piece of intro text, followed by a carousel, showing off a bit more of what The Winchester can offer. 
 
 ![Home Screenshot](/Diagrams_and_Screenshots/Screenshots/Edge_home.png?raw=true "Edge")
@@ -29,13 +29,13 @@ This is the home section for the Admins. You can go to the Orders section to vie
 ![Admin Products Screenshot](/Diagrams_and_Screenshots/Screenshots/Firefox_admin_products.png?raw=true "Firefox")
 This last page is where the Admin can view all the products on the system, create new ones, edit and delete them without having to use external software.
 
-Some key features to mention would be:
-The Api, by opening up The_Winchester_API solution and hitting run. You can view /api/users, /api/products, /api/orders.
-The Products page that new products can be made, edited and removed.
-The Orders page that new orders can be made, edited and removed.
-The Food and Drink section that will output all of the products in the database.
-The accessibility of the website in general, as well as the bootstrap layout and resizing features.
-
+Some key features to mention would be:   
+The Api, by opening up The_Winchester_API solution and hitting run. You can view /api/users, /api/products, /api/orders.   
+The Products page that new products can be made, edited and removed.   
+The Orders page that new orders can be made, edited and removed.   
+The Food and Drink section that will output all of the products in the database.   
+The accessibility of the website in general, as well as the bootstrap layout and resizing features.   
+   
 Thank you very much for visiting The Winchesters GitHub page, I hope it was to your liking, and have a good day!
 
 
